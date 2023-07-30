@@ -58,7 +58,6 @@ class User():
 
 
 if __name__ == '__main__':
-    print("Test User")
 
     user_1 = User()
     if user_1.id is None:
