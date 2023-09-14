@@ -8,13 +8,12 @@ from flask import Flask, jsonify, make_response
 app = Flask(__name__)
 app.register_blueprint(app_views)
 
-@app.route('/')
-def index():
+@app.route('/api/status')
+def api_status():
     """
-    default route
+    Api status route
     """
-    return "Hello, World"
-
+    return jsonify({"status": "OK"})
 
 @app.errorhandler(404)
 def not_found(error):
